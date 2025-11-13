@@ -1,0 +1,66 @@
+Tutto Bianco Lavanderias — Site Institucional
+Textos prontos para página institucional (multi-seções)
+1) Hero (acima da dobra)
+Título: Lavanderia com coleta & entrega em João Pessoa
+Sub: Suas roupas limpas, macias e cheirosas — sem você sair de casa.
+CTA primário: Pedir coleta no WhatsApp
+CTA secundário: Ver serviços e prazos
+Microprova social curta: Unidades em Manaíra e Tambaú. Delivery rápido e prático.
+2) Proposta de valor (3 pilares)
+•Tempo para você: a gente busca, lava, passa e devolve do jeitinho que você gosta.
+•Cuidado peça a peça: tratamento adequado para cada tecido e nível de sujidade.
+•Conveniência total: agendamento por WhatsApp e duas unidades para facilitar sua rotina.
+3) Serviços
+Lavagem & Higienização
+•Lavagem a água e a seco (quando indicado pelo tecido)
+•Remoção de manchas e odores
+•Higienização de edredons, cobertores, cortinas e peças volumosas
+•Passadoria profissional
+•Higienização de calçados (tênis/botas) e itens especiais
+4) Como funciona (coleta & entrega)
+•1. Você agenda no WhatsApp (informe endereço e melhor horário).
+•2. Coleta em domicílio pela equipe.
+•3. Lavagem e passadoria conforme o tipo de tecido/peça.
+•4. Entrega no prazo combinado — tudo embalado, cheiroso e pronto para uso.
+Nota de prazo: prazos podem variar conforme volume e tipo de peça (ex.: edredom/tapete). Consulte na hora do
+agendamento.
+5) Para quem é
+•Residencial: rotina corrida, família grande, viagem marcada.
+•Comercial: pousadas, clínicas, consultórios, estética (sob consulta).
+6) Unidades e contatos
+Manaíra (loja): Av. Gen. Edson Ramalho, 1037 — Manaíra. Tel.: (83) 3268-0277.
+Tambaú (loja): Av. Infante Dom Henrique, 777 — Tambaú. Tel.: (83) 3247-4743.
+WhatsApp/Delivery: centralize em um botão no site para agendamento rápido.
+7) Horário de funcionamento
+Seg–Sex: 08h–18h • Sáb: 08h–14h • Dom: fechado. (Confirme em feriados/datas especiais.)
+8) Depoimentos (placeholders)
+•“Entrega no prazo e peças impecáveis, virou parte da minha rotina.”
+•“O cheirinho é perfeito e as camisas vêm passadinhas, sem vincos.”
+•“Agendamento fácil pelo WhatsApp, recomendo!”
+9) FAQ (curto)
+Quais peças vocês atendem?
+Roupas do dia a dia, sociais, cama/mesa/banho e peças volumosas. Itens especiais (como
+tênis/botas) sob avaliação.
+Tem coleta & entrega em toda João Pessoa?
+Atendemos principalmente regiões próximas às lojas (Manaíra e Tambaú). Consulte seu
+endereço no WhatsApp.
+Usam lavagem a seco?
+Sim, quando indicada para o tecido/peça. A avaliação técnica define o processo mais seguro.
+10) CTAs finais
+•Pedir coleta agora (WhatsApp)
+•Perguntar prazos e valores
+•Falar com a loja mais próxima
+Extras úteis para o desenvolvedor
+Títulos/H1 alternativos:
+•Suas roupas limpas sem esforço — nós buscamos e entregamos.
+•Lavanderia em João Pessoa com cuidado peça a peça.
+•Do agendamento à entrega: praticidade que economiza seu tempo.
+Subtítulos/H2 prontos:
+•Cuidado que você vê, praticidade que você sente
+•Do tecido à passadoria, cada detalhe importa
+•Coleta & entrega em Manaíra e Tambaú
+CTAs variados:
+•Pedir coleta agora
+•Consultar prazos e valores
+•Falar via WhatsApp
+•Quero meu pedido pronto para usar
