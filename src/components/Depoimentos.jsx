@@ -4,15 +4,15 @@ const Depoimentos = () => {
   const depoimentos = [
     {
       texto: "Entrega no prazo e peças impecáveis, virou parte da minha rotina.",
-      autor: "Cliente Satisfeita"
+      autor: "Maria Silva"
     },
     {
       texto: "O cheirinho é perfeito e as camisas vêm passadinhas, sem vincos.",
-      autor: "Cliente Satisfeito"
+      autor: "Carlos Santos"
     },
     {
       texto: "Agendamento fácil pelo WhatsApp, recomendo!",
-      autor: "Cliente Satisfeita"
+      autor: "Ana Costa"
     }
   ]
 
