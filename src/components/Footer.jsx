@@ -10,14 +10,14 @@ const Footer = () => {
           <div>
             <div className="flex items-center space-x-2 mb-4">
               <img 
-                src="/logo-white.jpg" 
+                src="/logo-h-orange-transparent.png" 
                 alt="Tutto Bianco" 
-                className="h-10 w-auto"
+                className="h-20 w-auto"
                 onError={(e) => {
                   e.target.style.display = 'none'
                 }}
               />
-              <span className="text-xl font-bold">Tutto Bianco</span>
+              
             </div>
             <p className="text-gray-400">
               Lavanderia com coleta e entrega em João Pessoa. 

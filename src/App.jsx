@@ -3,7 +3,7 @@ import Hero from './components/Hero'
 import PropostaValor from './components/PropostaValor'
 import Servicos from './components/Servicos'
 import ComoFunciona from './components/ComoFunciona'
-import ParaQuem from './components/ParaQuem'
+import QuemSomos from './components/QuemSomos'
 import Unidades from './components/Unidades'
 import Depoimentos from './components/Depoimentos'
 import FAQ from './components/FAQ'
@@ -18,7 +18,7 @@ function App() {
       <PropostaValor />
       <Servicos />
       <ComoFunciona />
-      <ParaQuem />
+      <QuemSomos />
       <Unidades />
       <Depoimentos />
       <FAQ />

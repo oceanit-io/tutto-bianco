@@ -21,14 +21,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <img 
-              src="/logo-orange.jpg" 
+              src="/logo-h-orange-transparent.png" 
               alt="Tutto Bianco" 
-              className="h-10 w-auto"
+              className="h-16 w-auto"
               onError={(e) => {
                 e.target.style.display = 'none'
               }}
             />
-            <span className="text-xl font-bold text-primary-600">Tutto Bianco</span>
+            
           </div>
           
           <div className="hidden md:flex items-center space-x-6">
