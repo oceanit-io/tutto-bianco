@@ -3,8 +3,17 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
   body {
     @apply text-gray-800 antialiased;
+  }
+  
+  /* Scroll offset para compensar navbar fixa */
+  section[id] {
+    scroll-margin-top: 100px;
   }
 }
 
