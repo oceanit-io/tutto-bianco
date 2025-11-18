@@ -187,7 +187,7 @@ const QuemSomos = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-4 md:gap-6">
               {[
                 {
                   video: '/tapete.mp4',
@@ -212,7 +212,7 @@ const QuemSomos = () => {
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:scale-105"
+                  className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:scale-105 w-full min-w-0"
                 >
                   {/* Vídeo */}
                   <div className="relative w-full aspect-[9/16] min-h-[400px] md:min-h-[500px]">

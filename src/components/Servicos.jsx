@@ -5,7 +5,7 @@ const Servicos = () => {
     {
       title: "Lavagem & Higienização",
       items: [
-        "Lavagem a água e a seco (quando indicado pelo tecido)",
+        "Lavagem a água e a seco",
         "Remoção de manchas e odores",
         "Higienização de edredons, cobertores, cortinas e peças volumosas",
         "Passadoria profissional",
@@ -115,7 +115,7 @@ const Servicos = () => {
         <div className="max-w-6xl mx-auto">
           <div className="relative">
             {/* Cards Container */}
-            <div className="relative flex items-center justify-center gap-0 overflow-visible py-8" style={{ height: 'auto' }}>
+            <div className="relative flex items-center justify-center gap-0 overflow-hidden lg:overflow-visible py-8" style={{ height: 'auto' }}>
               {getVisibleCards().map(({ index, offset }) => {
                 const servico = servicos[index]
                 const isCenter = offset === 0
@@ -126,8 +126,10 @@ const Servicos = () => {
                 return (
                   <div
                     key={`${index}-${currentIndex}`}
-                    className={`flex-shrink-0 transition-all duration-700 ease-in-out cursor-pointer ${
-                      isCenter ? 'w-full max-w-[600px]' : 'w-[180px] md:w-[220px]'
+                    className={`flex-shrink-0 transition-all duration-700 ease-in-out ${
+                      isCenter 
+                        ? 'w-full max-w-[600px]' 
+                        : 'hidden lg:block w-[180px] md:w-[220px] cursor-pointer'
                     }`}
                     style={{
                       transform: `scale(${scale})`,
