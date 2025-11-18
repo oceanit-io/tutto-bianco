@@ -64,15 +64,6 @@ const Servicos = () => {
         "Restauração e preservação",
         "Técnicas profissionais especializadas"
       ]
-    },
-    {
-      title: "Tingimento",
-      items: [
-        "Tingimento profissional",
-        "Restauração de cores",
-        "Uniformização de tons",
-        "Técnicas modernas e seguras"
-      ]
     }
   ]
 
