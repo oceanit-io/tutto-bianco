@@ -9,6 +9,7 @@ import Depoimentos from './components/Depoimentos'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import WhatsappFloat from './components/WhatsappFloat'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Depoimentos />
       <FAQ />
       <Footer />
+      <WhatsappFloat />
     </div>
   )
 }

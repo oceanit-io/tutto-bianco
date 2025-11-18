@@ -29,5 +29,9 @@
   .section-padding {
     @apply py-16 md:py-24;
   }
+
+  .margem {
+    margin-bottom: 200px;
+  }
 }
 
