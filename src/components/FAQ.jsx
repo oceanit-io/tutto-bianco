@@ -33,7 +33,7 @@ const FAQ = () => {
   return (
     <section id="faq" className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Perguntas <span className="text-primary-600">Frequentes</span>
           </h2>
@@ -48,6 +48,8 @@ const FAQ = () => {
             return (
               <div 
                 key={index}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
                 className="bg-white border-2 border-primary-100 rounded-xl mb-4 overflow-hidden hover:border-primary-300 transition-all duration-200"
               >
                 <button

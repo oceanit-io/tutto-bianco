@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="bg-gray-900 text-white">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-3 gap-8 mb-8">
-          <div>
+          <div data-aos="fade-up" data-aos-delay="0">
             <div className="flex items-center space-x-2 mb-4">
               <img 
                 src="/logo-h-orange-transparent.png" 
@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
             <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
               <li>
@@ -51,7 +51,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <ul className="space-y-2 text-gray-400">
               <li>Manaíra: (83) 3268-0277</li>

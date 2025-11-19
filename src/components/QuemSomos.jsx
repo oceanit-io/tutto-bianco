@@ -73,7 +73,7 @@ const QuemSomos = () => {
   return (
     <section className="section-padding bg-gradient-to-b from-white via-primary-50 to-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Quem <span className="text-primary-600">Somos</span>
           </h2>
@@ -86,7 +86,7 @@ const QuemSomos = () => {
 
         <div className="max-w-7xl mx-auto">
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl margem">
+          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl margem" data-aos="fade-up" data-aos-delay="200">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -203,7 +203,7 @@ const QuemSomos = () => {
           <div className="relative max-w-6xl mx-auto px-6 sm:px-10 py-20 md:py-24">
             <div className="grid lg:grid-cols-2 gap-10 items-stretch justify-items-center">
                   {/* Texto foco mães */}
-                  <div className="bg-white/95 rounded-3xl shadow-xl p-8 md:p-10 space-y-6 backdrop-blur-sm flex flex-col justify-center aspect-[4/5] min-h-[500px]">
+                  <div className="bg-white/95 rounded-3xl shadow-xl p-8 md:p-10 space-y-6 backdrop-blur-sm flex flex-col justify-center aspect-[4/5] min-h-[500px]" data-aos="fade-right">
                     <div>
                       <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold">
                         <svg
@@ -246,7 +246,7 @@ const QuemSomos = () => {
                   </div>
 
                   {/* Coluna de imagens - Carousel */}
-                  <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] min-h-[500px]">
+                  <div className="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] min-h-[500px]" data-aos="fade-left">
                     <div
                       className="flex h-full transition-transform duration-500 ease-in-out"
                       style={{
@@ -296,7 +296,7 @@ const QuemSomos = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           <div>
-            <div className="text-center mb-12">
+            <div className="text-center mb-12" data-aos="fade-up">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                 Antes e <span className="text-primary-600">Depois</span>
               </h3>
@@ -335,6 +335,8 @@ const QuemSomos = () => {
               ].map((item, index) => (
                 <div
                   key={index}
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 100}
                   className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:scale-105 w-full min-w-0"
                 >
                   {/* Vídeo */}

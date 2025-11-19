@@ -29,7 +29,7 @@ const Unidades = () => {
   return (
     <section id="unidades" className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Nossas <span className="text-primary-600">Unidades</span>
           </h2>
@@ -43,6 +43,8 @@ const Unidades = () => {
             {unidades.map((unidade, index) => (
               <div 
                 key={index}
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+                data-aos-delay={index * 100}
                 className="bg-gradient-to-br from-primary-50 to-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -83,7 +85,7 @@ const Unidades = () => {
             ))}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-8" data-aos="fade-up" data-aos-delay="300">
             <a 
               href={whatsappLink}
               target="_blank"

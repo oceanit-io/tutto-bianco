@@ -78,7 +78,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="relative max-w-7xl mx-auto">
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl min-h-[1000px] md:min-h-0">
+          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl min-h-[1000px] md:min-h-0" data-aos="fade-up">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{

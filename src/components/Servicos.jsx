@@ -93,7 +93,7 @@ const Servicos = () => {
   return (
     <section id="servicos" className="section-padding bg-gradient-to-b from-white to-primary-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Nossos <span className="text-primary-600">Serviços</span>
           </h2>

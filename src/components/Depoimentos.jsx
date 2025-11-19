@@ -19,7 +19,7 @@ const Depoimentos = () => {
   return (
     <section className="section-padding bg-gradient-to-b from-white to-primary-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             O que nossos <span className="text-primary-600">clientes dizem</span>
           </h2>
@@ -32,6 +32,8 @@ const Depoimentos = () => {
           {depoimentos.map((depoimento, index) => (
             <div 
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 150}
               className="bg-white rounded-2xl shadow-xl p-6 md:p-8 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col h-full"
             >
               <div className="flex-grow">

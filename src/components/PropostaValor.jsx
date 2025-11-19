@@ -37,7 +37,7 @@ const PropostaValor = () => {
   return (
     <section className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Cuidado que você vê,{' '}
             <span className="text-primary-600">praticidade que você sente</span>
@@ -51,6 +51,8 @@ const PropostaValor = () => {
           {pilares.map((pilar, index) => (
             <div 
               key={index}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="bg-gradient-to-br from-primary-50 to-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-primary-100"
             >
               <div className="text-primary-600 mb-4 flex justify-center">{pilar.icon}</div>

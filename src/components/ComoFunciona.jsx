@@ -29,7 +29,7 @@ const ComoFunciona = () => {
   return (
     <section id="como-funciona" className="section-padding bg-white">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Como <span className="text-primary-600">Funciona</span>
           </h2>
@@ -43,6 +43,8 @@ const ComoFunciona = () => {
             {passos.map((passo, index) => (
               <div 
                 key={index}
+                data-aos="zoom-in"
+                data-aos-delay={index * 150}
                 className="relative bg-gradient-to-br from-primary-50 to-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="absolute -top-4 -left-4 w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
@@ -58,7 +60,7 @@ const ComoFunciona = () => {
             ))}
           </div>
 
-          <div className="bg-primary-50 rounded-2xl p-6 text-center">
+          <div className="bg-primary-50 rounded-2xl p-6 text-center" data-aos="fade-up" data-aos-delay="400">
             <p className="text-gray-700 mb-4">
               <strong>Nota:</strong> Prazos podem variar conforme volume e tipo de peça (ex.: edredom/tapete). 
               Consulte na hora do agendamento.

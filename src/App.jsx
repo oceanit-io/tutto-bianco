@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos'
 import Hero from './components/Hero'
 import PropostaValor from './components/PropostaValor'
 import Servicos from './components/Servicos'
@@ -12,6 +13,11 @@ import Navbar from './components/Navbar'
 import WhatsappFloat from './components/WhatsappFloat'
 
 function App() {
+  useEffect(() => {
+    // Atualizar AOS quando os componentes renderizarem
+    AOS.refresh()
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
