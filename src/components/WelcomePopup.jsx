@@ -2,20 +2,13 @@ import React, { useState, useEffect } from 'react'
 
 const WelcomePopup = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const [hasSeenPopup, setHasSeenPopup] = useState(false)
 
   useEffect(() => {
-    // Verifica se o usuário já viu o popup antes
-    const seen = localStorage.getItem('tutto-bianco-welcome-seen')
-    if (!seen) {
-      // Mostra o popup após um pequeno delay para melhor UX
-      const timer = setTimeout(() => {
-        setIsVisible(true)
-      }, 500)
-      return () => clearTimeout(timer)
-    } else {
-      setHasSeenPopup(true)
-    }
+    // Mostra o popup após um pequeno delay para melhor UX
+    const timer = setTimeout(() => {
+      setIsVisible(true)
+    }, 500)
+    return () => clearTimeout(timer)
   }, [])
 
   useEffect(() => {
@@ -31,8 +24,6 @@ const WelcomePopup = () => {
 
   const handleClose = () => {
     setIsVisible(false)
-    localStorage.setItem('tutto-bianco-welcome-seen', 'true')
-    setHasSeenPopup(true)
   }
 
   const handleConhecerMais = () => {
@@ -41,9 +32,14 @@ const WelcomePopup = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  if (hasSeenPopup || !isVisible) {
+  if (!isVisible) {
     return null
   }
+
+
+
+
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
