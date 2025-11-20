@@ -56,9 +56,9 @@ const Navbar = () => {
     <>
       <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-md' : 'bg-transparent'
-      }`}>
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
+      }`} style={{ maxWidth: '100vw', overflowX: 'hidden' }}>
+        <div className="container mx-auto px-4 py-4" style={{ maxWidth: '100%' }}>
+          <div className="flex items-center justify-between" style={{ maxWidth: '100%' }}>
             <a 
               href="#inicio" 
               className="flex items-center space-x-2" 
@@ -161,9 +161,10 @@ const Navbar = () => {
         onClick={() => setIsMenuOpen(false)}
       >
         <div 
-          className={`fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-[60] ${
+          className={`fixed top-0 right-0 h-full bg-white shadow-xl transform transition-transform duration-300 ease-in-out z-[60] ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
+          style={{ width: 'min(320px, 85vw)', maxWidth: '100vw' }}
           onClick={(e) => e.stopPropagation()}
         >
           {/* Botão de fechar */}

@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 const WelcomePopup = () => {
   const [isVisible, setIsVisible] = useState(false)
+
+  const handleClose = useCallback(() => {
+    setIsVisible(false)
+  }, [])
 
   useEffect(() => {
     // Mostra o popup após um pequeno delay para melhor UX
@@ -20,11 +24,7 @@ const WelcomePopup = () => {
 
       return () => clearTimeout(autoCloseTimer)
     }
-  }, [isVisible])
-
-  const handleClose = () => {
-    setIsVisible(false)
-  }
+  }, [isVisible, handleClose])
 
   const handleConhecerMais = () => {
     handleClose()
@@ -42,10 +42,10 @@ const WelcomePopup = () => {
 
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
-      <div className="relative bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden animate-slideUp">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm animate-fadeIn" style={{ overflowX: 'hidden' }}>
+      <div className="relative bg-white rounded-2xl sm:rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto overflow-x-hidden animate-slideUp" style={{ maxWidth: 'calc(100vw - 2rem)' }}>
         {/* Imagem de fundo */}
-        <div className="relative h-64 md:h-80 overflow-hidden">
+        <div className="relative h-48 sm:h-64 md:h-80 overflow-hidden">
           <img
             src="/mãe-3.png"
             alt="Tutto Bianco - Lavanderia"
@@ -55,21 +55,21 @@ const WelcomePopup = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-primary-800/60 to-transparent" />
           
           {/* Logo/Título sobre a imagem */}
-          <div className="absolute bottom-6 left-6 right-6 z-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+          <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 z-10">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2 break-words">
               Bem-vindo à <span className="text-primary-300">Tutto Bianco</span>
             </h2>
           </div>
         </div>
 
         {/* Conteúdo */}
-        <div className="p-6 md:p-8">
+        <div className="p-4 sm:p-6 md:p-8">
           <div className="space-y-4 mb-6">
-            <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed break-words">
               Somos uma lavanderia situada em <strong className="text-primary-600">João Pessoa</strong>, 
               especializada em cuidados profissionais com suas roupas e peças especiais.
             </p>
-            <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed break-words">
               Com tradição italiana, tecnologia moderna e muito carinho, transformamos o cuidado 
               com suas peças em uma experiência única. Desde roupas do dia a dia até itens 
               especiais, cada peça recebe atenção individualizada.
@@ -77,16 +77,16 @@ const WelcomePopup = () => {
           </div>
 
           {/* Botões */}
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 w-full">
             <button
               onClick={handleConhecerMais}
-              className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="flex-1 bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-4 sm:px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 whitespace-nowrap"
             >
               Conhecer mais
             </button>
             <button
               onClick={handleClose}
-              className="px-6 py-3 text-gray-600 hover:text-gray-800 font-medium transition-colors duration-200"
+              className="px-4 sm:px-6 py-3 text-gray-600 hover:text-gray-800 font-medium transition-colors duration-200 whitespace-nowrap"
             >
               Fechar
             </button>

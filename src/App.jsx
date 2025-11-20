@@ -20,7 +20,7 @@ function App() {
   }, [])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{ overflowX: 'hidden', maxWidth: '100vw' }}>
       <WelcomePopup />
       <Navbar />
       <Hero />
