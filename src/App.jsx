@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import WhatsappFloat from './components/WhatsappFloat'
+import WelcomePopup from './components/WelcomePopup'
 
 function App() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
+      <WelcomePopup />
       <Navbar />
       <Hero />
       <PropostaValor />

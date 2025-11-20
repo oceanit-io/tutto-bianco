@@ -31,6 +31,7 @@ const QuemSomos = () => {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videoRefs = useRef({});
   const [currentImage, setCurrentImage] = useState(0);
+  const [currentAntesDepois, setCurrentAntesDepois] = useState(0);
 
   useEffect(() => {
     // Pausar todos os vídeos exceto o atual
@@ -70,8 +71,35 @@ const QuemSomos = () => {
     setCurrentVideo((prev) => (prev + 1) % videos.length);
   };
 
+  const antesDepoisItems = [
+    {
+      video: "/tapete.mp4",
+      title: "Tapete",
+      description:
+        "Nossos tapetes recebem tratamento especializado que remove manchas profundas, odores e sujeiras acumuladas. Utilizamos técnicas profissionais de limpeza a seco e lavagem que preservam as fibras e cores originais, devolvendo a maciez e o brilho que seu tapete merece.",
+    },
+    {
+      video: "/calca.mp4",
+      title: "Calça",
+      description:
+        "Calças de todos os tipos recebem atenção especial na Tutto Bianco. Removemos manchas difíceis, restaurando a cor e o caimento original. Nossa passadoria profissional garante vincos perfeitos e acabamento impecável, deixando suas calças como novas.",
+    },
+    {
+      video: "/camisa.mp4",
+      title: "Camisa",
+      description:
+        "Camisas sociais e casuais são tratadas com o máximo cuidado. Removemos manchas de suor, comida e outras marcas, preservando o tecido e as cores. Nossa passadoria especializada garante golas e punhos impecáveis, deixando sua camisa pronta para qualquer ocasião.",
+    },
+    {
+      video: "/jaqueta.mp4",
+      title: "Jaqueta",
+      description:
+        "Jaquetas e casacos recebem tratamento diferenciado conforme o material. Seja couro, jeans, algodão ou tecidos sintéticos, utilizamos produtos e técnicas específicas para cada tipo. Removemos manchas, restauramos a cor e garantimos que sua jaqueta fique limpa, macia e com cheiro fresco.",
+    },
+  ];
+
   return (
-    <section className="section-padding bg-gradient-to-b from-white via-primary-50 to-white">
+    <section className="pt-8 md:pt-16 pb-16 md:pb-24 bg-gradient-to-b from-white via-primary-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -86,7 +114,7 @@ const QuemSomos = () => {
 
         <div className="max-w-7xl mx-auto">
           {/* Carousel Container */}
-          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl margem" data-aos="fade-up" data-aos-delay="200">
+          <div className="relative overflow-hidden rounded-2xl bg-white shadow-2xl mb-8 md:mb-32" data-aos="fade-up" data-aos-delay="200">
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
@@ -188,7 +216,7 @@ const QuemSomos = () => {
       </div>
 
       {/* Seção mães - Fora do container para full width */}
-      <div className="margem relative w-full">
+      <div className="relative w-full mb-20 md:mb-24">
         <div className="relative isolate overflow-hidden rounded-none shadow-2xl min-h-[1000px] flex items-center justify-center w-full">
           <div className="absolute inset-0 -z-10">
             <img
@@ -203,7 +231,7 @@ const QuemSomos = () => {
           <div className="relative max-w-6xl mx-auto px-6 sm:px-10 py-20 md:py-24">
             <div className="grid lg:grid-cols-2 gap-10 items-stretch justify-items-center">
                   {/* Texto foco mães */}
-                  <div className="bg-white/95 rounded-3xl shadow-xl p-8 md:p-10 space-y-6 backdrop-blur-sm flex flex-col justify-center aspect-[4/5] min-h-[500px]" data-aos="fade-right">
+                  <div className="bg-white/95 rounded-3xl shadow-xl px-8 pt-8 pb-12 md:px-10 md:pt-10 md:pb-16 space-y-6 backdrop-blur-sm flex flex-col justify-center aspect-[4/5] min-h-[500px]" data-aos="fade-right">
                     <div>
                       <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 text-primary-700 rounded-full text-sm font-semibold">
                         <svg
@@ -306,82 +334,186 @@ const QuemSomos = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-4 md:gap-6">
-              {[
-                {
-                  video: "/tapete.mp4",
-                  title: "Tapete",
-                  description:
-                    "Nossos tapetes recebem tratamento especializado que remove manchas profundas, odores e sujeiras acumuladas. Utilizamos técnicas profissionais de limpeza a seco e lavagem que preservam as fibras e cores originais, devolvendo a maciez e o brilho que seu tapete merece.",
-                },
-                {
-                  video: "/calca.mp4",
-                  title: "Calça",
-                  description:
-                    "Calças de todos os tipos recebem atenção especial na Tutto Bianco. Removemos manchas difíceis, restaurando a cor e o caimento original. Nossa passadoria profissional garante vincos perfeitos e acabamento impecável, deixando suas calças como novas.",
-                },
-                {
-                  video: "/camisa.mp4",
-                  title: "Camisa",
-                  description:
-                    "Camisas sociais e casuais são tratadas com o máximo cuidado. Removemos manchas de suor, comida e outras marcas, preservando o tecido e as cores. Nossa passadoria especializada garante golas e punhos impecáveis, deixando sua camisa pronta para qualquer ocasião.",
-                },
-                {
-                  video: "/jaqueta.mp4",
-                  title: "Jaqueta",
-                  description:
-                    "Jaquetas e casacos recebem tratamento diferenciado conforme o material. Seja couro, jeans, algodão ou tecidos sintéticos, utilizamos produtos e técnicas específicas para cada tipo. Removemos manchas, restauramos a cor e garantimos que sua jaqueta fique limpa, macia e com cheiro fresco.",
-                },
-              ].map((item, index) => (
+            {/* Container do carousel em mobile, grid em desktop */}
+            <div className="relative">
+              {/* Carousel para mobile, Grid para desktop */}
+              <div className="lg:hidden relative overflow-hidden rounded-2xl">
                 <div
-                  key={index}
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 100}
-                  className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:scale-105 w-full min-w-0"
+                  className="flex transition-transform duration-500 ease-in-out"
+                  style={{
+                    transform: `translateX(-${currentAntesDepois * 100}%)`,
+                  }}
                 >
-                  {/* Vídeo */}
-                  <div className="relative w-full aspect-[9/16] min-h-[400px] md:min-h-[500px]">
-                    <video
-                      src={item.video}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      className="w-full h-full object-cover"
-                      preload="auto"
-                    />
+                  {antesDepoisItems.map((item, index) => (
+                    <div
+                      key={index}
+                      className="min-w-full w-full flex-shrink-0 px-2"
+                    >
+                      <div className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 w-full">
+                        {/* Vídeo */}
+                        <div className="relative w-full aspect-[9/12] min-h-[400px]">
+                          <video
+                            src={item.video}
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="w-full h-full object-cover"
+                            preload="auto"
+                          />
 
-                    {/* Overlay com gradiente */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 transition-opacity duration-300 group-hover:from-black/95 group-hover:via-black/70 group-hover:to-black/40" />
+                          {/* Overlay com gradiente */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
 
-                    {/* Título sempre visível */}
-                    <div className="absolute top-4 left-4 right-4 z-10">
-                      <h4 className="text-xl md:text-2xl font-bold text-white">
-                        {item.title}
-                      </h4>
+                          {/* Título sempre visível */}
+                          <div className="absolute top-4 left-4 right-4 z-10">
+                            <h4 className="text-xl font-bold text-white">
+                              {item.title}
+                            </h4>
+                          </div>
+
+                          {/* Descrição sempre visível em mobile */}
+                          <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+                            <p className="text-sm text-white leading-relaxed mb-2">
+                              {item.description}
+                            </p>
+                            <div className="flex items-center gap-2 text-primary-400">
+                              <svg
+                                className="w-4 h-4"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                              >
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                              </svg>
+                              <span className="font-semibold text-xs">
+                                Resultado garantido
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
+                  ))}
+                </div>
 
-                    {/* Descrição no hover */}
-                    <div className="absolute bottom-0 left-0 right-0 p-4 md:p-6 transform transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 z-10">
-                      <p className="text-sm md:text-base text-white leading-relaxed">
-                        {item.description}
-                      </p>
-                      <div className="mt-4 flex items-center gap-2 text-primary-400">
-                        <svg
-                          className="w-4 h-4 md:w-5 md:h-5"
-                          fill="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span className="font-semibold text-xs md:text-sm">
-                          Resultado garantido
-                        </span>
+                {/* Setas de navegação - Mobile */}
+                <button
+                  onClick={() =>
+                    setCurrentAntesDepois(
+                      (prev) => (prev - 1 + antesDepoisItems.length) % antesDepoisItems.length
+                    )
+                  }
+                  className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                  aria-label="Item anterior"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <button
+                  onClick={() =>
+                    setCurrentAntesDepois(
+                      (prev) => (prev + 1) % antesDepoisItems.length
+                    )
+                  }
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg transition-all duration-300 hover:scale-110 z-20"
+                  aria-label="Próximo item"
+                >
+                  <svg
+                    className="w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Indicadores - Mobile */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-20">
+                  {antesDepoisItems.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentAntesDepois(index)}
+                      className={`h-2 rounded-full transition-all duration-300 ${
+                        index === currentAntesDepois
+                          ? "w-6 bg-primary-600"
+                          : "w-2 bg-white/50 hover:bg-white/75"
+                      }`}
+                      aria-label={`Ir para item ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Grid para desktop */}
+              <div className="hidden lg:grid grid-cols-4 gap-6">
+                {antesDepoisItems.map((item, index) => (
+                  <div
+                    key={index}
+                    data-aos="zoom-in"
+                    data-aos-delay={index * 100}
+                    className="group relative overflow-hidden rounded-2xl shadow-xl bg-gray-900 cursor-pointer transform transition-all duration-300 hover:shadow-2xl hover:scale-105 w-full"
+                  >
+                    {/* Vídeo */}
+                    <div className="relative w-full aspect-[9/16] min-h-[500px]">
+                      <video
+                        src={item.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-full object-cover"
+                        preload="auto"
+                      />
+
+                      {/* Overlay com gradiente */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30 transition-opacity duration-300 group-hover:from-black/95 group-hover:via-black/70 group-hover:to-black/40" />
+
+                      {/* Título sempre visível */}
+                      <div className="absolute top-4 left-4 right-4 z-10">
+                        <h4 className="text-2xl font-bold text-white">
+                          {item.title}
+                        </h4>
+                      </div>
+
+                      {/* Descrição no hover */}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 transform transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 z-10">
+                        <p className="text-base text-white leading-relaxed">
+                          {item.description}
+                        </p>
+                        <div className="mt-4 flex items-center gap-2 text-primary-400">
+                          <svg
+                            className="w-5 h-5"
+                            fill="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span className="font-semibold text-sm">
+                            Resultado garantido
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

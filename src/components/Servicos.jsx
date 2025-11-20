@@ -91,7 +91,7 @@ const Servicos = () => {
   }
 
   return (
-    <section id="servicos" className="section-padding bg-gradient-to-b from-white to-primary-50">
+    <section id="servicos" className="pt-8 md:pt-16 pb-16 md:pb-24 bg-gradient-to-b from-white to-primary-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16" data-aos="fade-up">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
